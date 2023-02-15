@@ -3,8 +3,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load image and convert to grayscale
-img = cv2.imread('image.jpg')
+img = cv2.imread('/home/skin/face_data/test0/Rgb_Cool.png')
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+# gray = cv2.pyrDown(gray)
 
 # Apply median filter to remove noise and small details
 median = cv2.medianBlur(gray, 5)
